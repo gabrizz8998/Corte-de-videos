@@ -47,5 +47,3 @@ var loadInfo = function (videoId) {
 var storeInfo = function (info) {
     console.log(info);
 };
-
-loadInfo("LuuDoogz8E8")
