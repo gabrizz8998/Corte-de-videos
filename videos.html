@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header></header>
+    <section id=crear_cortes>
+        <input type="text" name="" id="url" placeholder="Introduce URL del video de youtube">
+        <input type="button" id="poner_video" value="Ver video"><input type="button" id="boton_corte" value="Crear Corte">
+            <div id="video">
+                <div id="cajas">
+                    <div id="iframe">
+                        <iframe id=iframe_video frameborder="1px solid black";   clipboard-write;  ></iframe>
+                        <div id="campos_video" class="campos">
+                            <div>Titulo del video <input type="text" id="titulo"></div>
+                            <div>Autor del video <input type="text" id="autor"></div>
+                            <div>Tema <input type="text" id="tema"></div>
+                            <div>Descripción<input type="text" id="descrpcion"></div>
+                            <p><input type="button" id="guardar_video" value="Guardar Video"></p>
+                        </div>
+                    </div>
+                    <div id=caja_corte>
+                        <canvas id="corte" src="375x375.png"></canvas>
+                        <div id="campos_corte" class="campos">
+                            <div>Titulo del corte <input type="text" id="titulo_corte"></div>
+                            <div>Segundo inicio<input type="text" id="segundo_inicio" disabled="disabled"></div>
+                            <div>Segundo fin<input type="text" id="segundo_fin" disabled="disabled"></div>
+                            <div>Descripción<input type="text" id="descrpcion"></div>
+                            <div>Palabras clave<input type="text" id="descrpcion" placeholder="Palabras clave separadas  comas"></div>
+                            <p><input type="button" id="guardar_corte" value="Guardar Corte"></p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+  
+            
+        
+    </section>
+    <aside id=menu class="plegado">
+        <nav>
+			<ul>
+				<li class="selected">
+					<span>Crear Corte</span>
+
+				</li>
+                <li>
+					<span>Buscar Corte</span>
+				</li>
+                <li>
+					<span>Cursos Disponibles</span>
+				</li>
+                <li>
+					<span>Crear Cursos</span>
+				</li>
+                <li>
+					<span>Registrar Usuario</span>
+				</li>
+                
+			</ul>
+		</nav>
+        <div id="arrow">
+		</div>
+    </aside>
+    <footer></footer>
+</body> 
+<script src="js/funciones_video.js"></script>
+</html>

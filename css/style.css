@@ -13,7 +13,7 @@ aside {
     z-index: 1000;
     position: absolute;
     top: 0;
-    background-color: white;
+    background-color: rgba(128, 236, 240, 0.575);
     width: 220px;
     height:100%;
     box-shadow: 4px 4px 4px black;
@@ -44,9 +44,10 @@ aside li {
     display: flex;
     flex-direction: column;
     padding:10px;
+    background-color:#cbe6f1  ;
 }
 aside li:hover{
-    background-color:#e2e2e2  ;
+    background-color:#5ab9b9  ;
 }
 aside li span{
     margin-top:7px;
@@ -56,17 +57,17 @@ aside li span{
 
 
 aside .selected{
-    background-color: #cfcece ;
+    background-color: #5ab9b9 ;
     border-left: 6px solid gray;
 }
 
 aside .selected:hover{
-    background-color: #cfcece ;
+    background-color: #5ab9b9 ;
     border-left: 6px solid gray;
 }
 
 .plegado{
-    background-color: #666;
+    background-color: rgb(86, 95, 122);
     transform: translate(-180px,0)
     
 }
@@ -78,31 +79,88 @@ aside .selected:hover{
 /*      Crear cortes      */
 
 #crear_cortes{
-    margin-top: 30px;
-    margin-left: 65px;
+    margin-left: 95px;
 
 }
 
-#video{
-    display:flex;
-    flex-wrap: wrap;
+
+#iframe{
+    width: 60%;
+    margin:0;
 }
 
+#caja_corte{
+    width: 60%;
+    position: relative;
+    right: 5%;
+
+}
+#cajas{
+display:flex;
+
+}
+
+#boton_corte{
+    margin-left:22%;
+}
+
+
+input[type=button]:hover{
+    background-color:rgb(0, 110, 255);
+}
+input[type=button]{
+    padding: 7px 10px;
+    border: 1px solid rgb(0, 110, 255);
+    background-color:white;
+    border-radius:7px;
+}
+
+
+
+input[type=text] {
+    padding: 8px 20px;
+    width:45%;
+    max-width:250px ;
+    min-width: 100px;
+    margin: 4px 5px;
+    margin-left:1%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+.campos div{
+    margin:3px 0;
+}
+input[type=text]:focus {
+    background-color: rgba(173, 216, 230, 0.404);
+}
 
 iframe{
-    background-image: url(../imagenes/iframe_fondo.jpg);
-    background-size: 600px;
-    background-position: 10%;
-    background-repeat: no-repeat;
+    /* background-image: linear-gradient(to right, rgb(0, 255, 255) , rgb(0, 140, 255)); */
     border: 2px solid black;
     border-radius: 19px;
-    width:47%;  
+    width:60%;
+    margin-right: 80px;
     height:290px; 
+    margin-top: 10px;
+    background-image: linear-gradient(to left, rgb(0, 255, 255) , rgb(0, 140, 255));
 }
 
 #corte{
+    margin-top: 10px;
     height:290px;
-    width:47%;  
+
+    width:60%;
     border: 2px solid black;
     border-radius: 19px;
+    background-image: linear-gradient(to left, rgb(0, 255, 255) , rgb(0, 140, 255));
+}
+
+#crear_corte{
+    position: relative;
+    left: 20%;
 }

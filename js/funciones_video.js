@@ -7,7 +7,10 @@ let enlaces=document.getElementsByTagName("li");
 let boton=document.getElementById("poner_video");
 boton.addEventListener("click",cambiarURL,false)
 
+let iframe=document.getElementById("iframe_video")
 
+let boton_corte=document.getElementById("boton_corte");
+boton_corte.addEventListener("click",capturarFoto,false)
 
 for(let i=0;i<enlaces.length;i++){
     enlaces[i].addEventListener("click",cambiarSeleccionado,false);
@@ -33,17 +36,16 @@ function cambiarSeleccionado(){
 let inicio_video="https://www.youtube.com/embed/"
 function cambiarURL(){
     let id_video=url.value.substring(url.value.indexOf("=")+1,url.length);
-    video.src=inicio_video+id_video;
+    iframe.src=inicio_video+id_video;
 }
 
 
-var loadInfo = function (videoId) {
-    var gdata = document.createElement("script");
-    gdata.src = "http://gdata.youtube.com/feeds/api/videos/" + videoId + "?v=2&alt=jsonc&callback=storeInfo";
-    var body = document.getElementsByTagName("body")[0];
-    body.appendChild(gdata);
-};
 
-var storeInfo = function (info) {
-    console.log(info);
-};
+function capturarFoto() {
+    let oFoto = document.getElementById("corte")
+    let oContexto = oFoto.getContext("2d");
+    oContexto.drawImage(iframe, 0, 0, 300, 160);
+    let myImage = oFoto.toDataURL("image/png");
+    console.log(myImage);
+    grabar(myImage)
+  }

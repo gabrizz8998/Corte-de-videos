@@ -39,7 +39,7 @@ function redireccion(json) {
         alert("Usuario no registrado")
     }else{
         if(json[0].Permisos_Usuario==1){
-            window.location.href = "/index.html";
+            window.location.href = "/videos.html";
         }
         else if(json[0].Permisos_Usuario==0){
             window.location.href = "/cortes.html";
