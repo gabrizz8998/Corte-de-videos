@@ -1,3 +1,8 @@
+function onYouTubeIframeAPIReady(){
+    console.log("onYouTubeIframeAPIReady")
+}
+let iframe=document.getElementById("iframe_video")
+iframe
 arrow.addEventListener("click",mover_menu,false);
 
 let menu=document.getElementById("menu");
@@ -7,7 +12,7 @@ let enlaces=document.getElementsByTagName("li");
 let boton=document.getElementById("poner_video");
 boton.addEventListener("click",cambiarURL,false)
 
-let iframe=document.getElementById("iframe_video")
+
 
 let boton_corte=document.getElementById("boton_corte");
 boton_corte.addEventListener("click",capturarFoto,false)
@@ -34,18 +39,20 @@ function cambiarSeleccionado(){
 
 
 let inicio_video="https://www.youtube.com/embed/"
+let fin_video="?enablejsapi=1"
 function cambiarURL(){
     let id_video=url.value.substring(url.value.indexOf("=")+1,url.length);
-    iframe.src=inicio_video+id_video;
+    iframe.src=inicio_video+id_video+fin_video;
 }
 
 
 
 function capturarFoto() {
-    let oFoto = document.getElementById("corte")
-    let oContexto = oFoto.getContext("2d");
-    oContexto.drawImage(iframe, 0, 0, 300, 160);
-    let myImage = oFoto.toDataURL("image/png");
-    console.log(myImage);
-    grabar(myImage)
+    // let oFoto = document.getElementById("corte")
+    // let oContexto = oFoto.getContext("2d");
+    // oContexto.drawImage(iframe, 0, 0, 300, 160);
+    // let myImage = oFoto.toDataURL("image/png");
+    // console.log(myImage);
+    // grabar(myImage)
+    console.log(iframe.getCurrentTime());
   }
